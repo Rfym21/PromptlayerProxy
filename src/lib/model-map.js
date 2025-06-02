@@ -104,6 +104,28 @@ const modelMap = {
       "top_p": 1
     }
   },
+  "gpt-4.1-mini": {
+    "provider": "openai",
+    "name": "gpt-4.1-mini",
+    "model_config_display_name": null,
+    "parameters": {
+      "temperature": 1,
+      "seed": 0,
+      "response_format": null,
+      "top_p": 1
+    }
+  },
+  "gpt-4.1-nano": {
+    "provider": "openai",
+    "name": "gpt-4.1-nano",
+    "model_config_display_name": null,
+    "parameters": {
+      "temperature": 1,
+      "seed": 0,
+      "response_format": null,
+      "top_p": 1
+    }
+  },
   "gpt-4.5-preview": {
     "provider": "openai",
     "name": "gpt-4.5-preview",
@@ -115,6 +137,96 @@ const modelMap = {
       "top_p": 1,
       "frequency_penalty": 0,
       "presence_penalty": 0
+    }
+  },
+  "o3": {
+    "provider": "openai",
+    "name": "o3",
+    "model_config_display_name": null,
+    "parameters": {
+      "response_format": {
+        "type": "text"
+      },
+      "reasoning_effort": "high",
+      "max_completion_tokens": 100000
+    }
+  },
+  "gpt-4o-search-preview": {
+    "provider": "openai",
+    "name": "gpt-4o-search-preview",
+    "model_config_display_name": null,
+    "parameters": {
+      "response_format": null,
+      "web_search_options": {
+        "search_context_size": "high",
+        "user_location": {
+          "approximate": {
+            "city": "New York",
+            "country": "US",
+            "region": "New York",
+            "timezone": "America/New_York"
+          },
+          "type": "approximate"
+        }
+      }
+    }
+  },
+  "gpt-4o-mini-search-preview": {
+    "provider": "openai",
+    "name": "gpt-4o-mini-search-preview",
+    "model_config_display_name": null,
+    "parameters": {
+      "response_format": null,
+      "web_search_options": {
+        "search_context_size": "medium",
+        "user_location": {
+          "approximate": {
+            "city": "New York",
+            "country": "US",
+            "region": "New York",
+            "timezone": "America/New_York"
+          },
+          "type": "approximate"
+        }
+      }
+    }
+  },
+  "gpt-4o": {
+    "provider": "openai",
+    "name": "gpt-4o-2024-11-20",
+    "model_config_display_name": null,
+    "parameters": {
+      "temperature": 1,
+      "seed": 0,
+      "response_format": null,
+      "top_p": 1,
+      "frequency_penalty": 0,
+      "presence_penalty": 0
+    }
+  },
+  "gpt-4o-mini": {
+    "provider": "openai",
+    "name": "gpt-4o-mini",
+    "model_config_display_name": null,
+    "parameters": {
+      "temperature": 1,
+      "seed": 0,
+      "response_format": null,
+      "top_p": 1,
+      "frequency_penalty": 0,
+      "presence_penalty": 0
+    }
+  },
+  "o3-mini": {
+    "provider": "openai",
+    "name": "o3-mini",
+    "model_config_display_name": null,
+    "parameters": {
+      "response_format": {
+        "type": "text"
+      },
+      "reasoning_effort": "high",
+      "max_completion_tokens": 100000
     }
   }
 

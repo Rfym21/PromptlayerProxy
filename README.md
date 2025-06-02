@@ -43,8 +43,16 @@
 | 🔮 `claude-opus-4-20250514` | `32,000` | `-` | Anthropic |
 | 🧠 `claude-opus-4-20250514-thinking` | `32,000` | `16,000` | Anthropic |
 | 🤖 `o4-mini` | `100,000` | `-` | OpenAI |
+| 🤖 `o3` | `100,000` | `-` | OpenAI |
+| 🤖 `o3-mini` | `100,000` | `-` | OpenAI |
 | 🤖 `chatgpt-4o-latest` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4o` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4o-mini` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4o-search-preview` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4o-mini-search-preview` | `-` | `-` | OpenAI |
 | 🤖 `gpt-4.1` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4.1-mini` | `-` | `-` | OpenAI |
+| 🤖 `gpt-4.1-nano` | `-` | `-` | OpenAI |
 | 🤖 `gpt-4.5-preview` | `-` | `-` | OpenAI |
 
 </div>

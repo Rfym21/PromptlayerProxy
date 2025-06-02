@@ -14,11 +14,11 @@ class Manager {
   async init(accounts) {
     accounts = accounts.split(",").filter(account => account.trim() !== "")
     for (const account of accounts) {
-      const [username, password] = account.split(":")
+      // const [username, password] = account.split(":")
       this.accounts.push({
-        username,
-        password,
-        token: null,
+        username: null,
+        password: null,
+        token: account,
         clientId: null,
         workspaceId: null,
         access_token: null,
@@ -87,19 +87,19 @@ class Manager {
   }
 
   async initAccount(account) {
-    const token = await this.login(account.username, account.password)
-    if (!token) {
-      return false
-    }
-    const { clientId, access_token } = await this.getClientId(token)
+    // const token = await this.login(account.username, account.password)
+    // if (!token) {
+    //   return false
+    // }
+    const { clientId, access_token } = await this.getClientId(account.token)
     if (!clientId || !access_token) {
       return false
     }
-    const workspaceId = await this.getWorkspaceId(token)
+    const workspaceId = await this.getWorkspaceId(account.token)
     if (!workspaceId) {
       return false
     }
-    account.token = token
+    // account.token = token
     account.clientId = clientId
     account.workspaceId = workspaceId
     account.access_token = access_token
@@ -119,7 +119,7 @@ class Manager {
       return null
     }
     
-    if (!account.token) {
+    if (!account.token || !account.access_token || !account.clientId || !account.workspaceId) {
       console.log(`初始化账户: ${account.username}`)
       const initialized = await this.initAccount(account)
       if (!initialized) {
@@ -134,7 +134,7 @@ class Manager {
       }
     }
     
-    console.log(`当前账户: ${account.username}, Token: ${account.token ? 'Valid' : 'Invalid'}`)
+    console.log(`当前账户: ${account.username}, Token: ${account.token}`)
     this.current_account++
     if (this.current_account >= this.accounts.length) {
       this.current_account = 0
