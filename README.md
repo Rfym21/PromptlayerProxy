@@ -122,8 +122,9 @@ npm install
 创建 `.env` 文件：
 
 ```env
-ACCOUNTS=your_account:your_password
-AUTH_TOKEN=your_auth_token_here
+ACCOUNTS=your_email1:your_password1,your_email2:your_password2,at1,at2... # at和账号密码可以混用，但是不配置 YES_CAPTCHA_CLIENT_KEY 无法使用账号密码登录
+AUTH_TOKEN=your_auth_token_here # 自行设置的鉴权密钥
+YES_CAPTCHA_CLIENT_KEY=your_yes_captcha_client_key_here # 因为promptlayer官方登录接口有谷歌验证，所以: 如果你需要使用"账号密码登录"，则需要填写该参数
 ```
 
 #### 🏃 **Step 3**: 启动开发模式

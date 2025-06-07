@@ -8,3 +8,4 @@ services:
     environment:
       - ACCOUNTS=your_account:your_password  # 填入promptlayer账号密码，账号密码之间用:隔开，多个账号用逗号分隔
       - AUTH_TOKEN=your_auth_token_here  # 设置API认证密钥
+      - YES_CAPTCHA_CLIENT_KEY=your_yes_captcha_client_key_here  # 设置yes_captcha_client_key
